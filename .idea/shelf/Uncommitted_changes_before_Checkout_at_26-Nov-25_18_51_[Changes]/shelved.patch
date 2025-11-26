@@ -1,0 +1,27 @@
+Index: readme.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># \uD83C\uDFB2 Telegram Name Randomizer Bot\r\n# \uD83D\uDC49 Check it out at **[\"@loterejabot\"](https://t.me/loterejabot)** \uD83E\uDEE3\r\n\r\n> **Hello!** This is my first telegram bot. I'm learning Python and wanted to create something practical that could be useful in real life. \r\n> This bot helps randomly select names from a list - perfect for giveaways or making fair decisions. So, it's always lottery :)\r\n> \r\n> This bot is hosted for free on https://www.render.com (dashboard: https://telegram-lottery-bot-kfwz.onrender.com/)\r\n> To keep this bot \"alive\" I am using UptimeRobot (dashboard: https://stats.uptimerobot.com/JPnnkOWUZi)\r\n\r\n# \uD83C\uDFB0 Simple Lottery Telegram Bot\r\n\r\nA lightweight and easy-to-use Telegram bot written in Python. Code is documented and beginner-friendly for understanding.\r\nIt allows users to input a list of names and randomly select winners for raffles, lotteries, or giveaways.\r\n\r\n## ✨ Features\r\n\r\n* **Simple Input:** Just paste a list of names (each on a new line).\r\n* **Random Selection:** Fairly picks a winner from the provided list.\r\n* **Statistics:** Tracks how many times each person won during the current session.\r\n* **Input Validation:** Ensures there are at least 2 players before starting.\r\n* **User Friendly:** Interactive buttons (Next Winner, Finish & Stats, New Game).\r\n\r\n## \uD83D\uDEE0 Prerequisites\r\n\r\n* Python 3.x installed on your system.\r\n* A Telegram Bot Token (from [@BotFather](https://t.me/BotFather)).\r\n\r\n## \uD83D\uDCE6 Installation\r\n\r\n1.  **Clone the repository** (or download the files):\r\n    ```bash\r\n    git clone [https://github.com/your-username/lottery-bot.git](https://github.com/your-username/lottery-bot.git)\r\n    cd lottery-bot\r\n    ```\r\n\r\n2.  **Install the required library:**\r\n    This bot uses `pyTelegramBotAPI`.\r\n    ```bash\r\n    pip install pyTelegramBotAPI\r\n    ```\r\n\r\n3.  **Configuration:**\r\n    * Open the `bot.py` (or `main.py`) file in your code editor.\r\n    * Find the line: `API_TOKEN = 'YOUR_TOKEN_HERE'`\r\n    * Replace `'YOUR_TOKEN_HERE'` with your actual Telegram Bot Token.\r\n\r\n    > **⚠\uFE0F Security Note:** Never publish your bot token publicly on GitHub or other websites.\r\n\r\n### \uD83D\uDE80 How to Run the Bot\r\n\r\n1.  **Open your Terminal** (or Command Prompt/CMD on Windows).\r\n2.  **Navigate** to the folder where you saved your `bot.py` file.\r\n    *Example:*\r\n    ```bash\r\n    cd /path/to/your/lottery-bot-folder\r\n    ```\r\n3.  **Execute the script** using Python:\r\n    ```bash\r\n    python bot.py\r\n    ```\r\n    The bot will now start listening for messages, and you should see the message: `Bot is running...`\r\n\r\n\r\n### \uD83D\uDED1 How to Stop the Bot (CLI)\r\n\r\nIf you run the bot using `python bot.py`, it will run indefinitely in your console (using `bot.infinity_polling()`).\r\n\r\nTo stop the running process:\r\n\r\n1.  Make sure the **Command Prompt** or **Terminal** window where the bot is running is active.\r\n2.  Press the key combination: **Ctrl + C**.\r\n\r\nThe bot process will be immediately terminated, and you will return to the command line prompt.\r\n\r\n\r\nAnd good luck at your lottery! \r\n\r\n  \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/readme.md b/readme.md
+--- a/readme.md	(revision bdf7e4fb87d411948709bbac75970f9dbfbad083)
++++ b/readme.md	(date 1764175782502)
+@@ -1,11 +1,11 @@
+ # 🎲 Telegram Name Randomizer Bot
+ # 👉 Check it out at **["@loterejabot"](https://t.me/loterejabot)** 🫣
+ 
+-> **Hello!** This is my first telegram bot. I'm learning Python and wanted to create something practical that could be useful in real life. 
+-> This bot helps randomly select names from a list - perfect for giveaways or making fair decisions. So, it's always lottery :)
+-> 
+-> This bot is hosted for free on https://www.render.com (dashboard: https://telegram-lottery-bot-kfwz.onrender.com/)
+-> To keep this bot "alive" I am using UptimeRobot (dashboard: https://stats.uptimerobot.com/JPnnkOWUZi)
++**Hello!** This is my first telegram bot. I'm learning Python and wanted to create something practical that could be useful in real life. 
++This bot helps randomly select names from a list - perfect for giveaways or making fair decisions. So, it's always lottery :)
++
++This bot is hosted for free on https://www.render.com (dashboard: https://telegram-lottery-bot-kfwz.onrender.com/)
++To keep this bot "alive" I am using UptimeRobot (dashboard: https://stats.uptimerobot.com/JPnnkOWUZi)
+ 
+ # 🎰 Simple Lottery Telegram Bot
+ 

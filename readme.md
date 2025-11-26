@@ -1,7 +1,12 @@
-# 🎲 Telegram Name Randomizer Bot
+# 🎲 Telegram Name Randomizer Bot 
+# 👉 Check it out at **["@loterejabot"](https://t.me/loterejabot)** 🫣
 
-> **Hello!** This is my first telegram bot. I'm learning Python and wanted to create something practical that could be useful in real life. 
-> This bot helps randomly select names from a list - perfect for giveaways or making fair decisions. So, it's always lottery :)
+**Hello!** This is my first telegram bot. I'm learning Python and wanted to create something practical that could be useful in real life. 
+This bot helps randomly select names from a list - perfect for giveaways or making fair decisions. So, it's always lottery :)
+ 
+This bot is hosted for free on https://www.render.com (dashboard: https://telegram-lottery-bot-kfwz.onrender.com/)
+
+To keep this bot "alive" I am using UptimeRobot (dashboard: https://stats.uptimerobot.com/JPnnkOWUZi)
 
 # 🎰 Simple Lottery Telegram Bot
 
