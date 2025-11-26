@@ -30,8 +30,8 @@ It allows users to input a list of names and randomly select winners for raffles
 
 1.  **Clone the repository** (or download the files):
     ```bash
-    git clone [https://github.com/your-username/lottery-bot.git](https://github.com/your-username/lottery-bot.git)
-    cd lottery-bot
+    git clone [https://github.com/pavels-s/telegram-lottery-bot.git](https://github.com/pavels-s/telegram-lottery-bot.git)
+    cd telegram-lottery-bot
     ```
 
 2.  **Install the required library:**
