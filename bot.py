@@ -13,6 +13,8 @@ import random
 import os
 from threading import Thread
 from flask import Flask
+import time
+import requests
 
 # CONFIGURATION
 # Token is now taken from environment variable (secure!)
@@ -34,6 +36,21 @@ def health():
 def run_flask():
     port = int(os.environ.get('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    """Pings itself every 14 minutes to prevent sleeping"""
+    url = os.environ.get('RENDER_EXTERNAL_URL')
+    if not url:
+        print("⚠️ RENDER_EXTERNAL_URL not found, keep-alive disabled")
+        return
+    
+    while True:
+        try:
+            time.sleep(14 * 60)  # Sleep for 14 minutes
+            response = requests.get(f"{url}/health")
+            print(f"🏓 Keep-alive ping: {response.status_code}")
+        except Exception as e:
+            print(f"⚠️ Keep-alive error: {e}")
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -156,12 +173,28 @@ def handle_names(message):
 
 
 if __name__ == "__main__":
-    print("🤖 Bot is running...")
+    print("🤖 Bot is starting...")
+    
+    # Remove webhook if exists (fixes 409 error)
+    try:
+        bot.remove_webhook()
+        print("✅ Webhook removed")
+    except Exception as e:
+        print(f"⚠️ Webhook removal failed: {e}")
     
     # Start Flask in a separate thread
     flask_thread = Thread(target=run_flask)
     flask_thread.daemon = True
     flask_thread.start()
+    print("✅ Flask server started")
     
-    # Start the bot
-    bot.infinity_polling()
+    # Start the bot with error handling
+    print("✅ Starting polling...")
+    while True:
+        try:
+            bot.infinity_polling(timeout=60, long_polling_timeout=60)
+        except Exception as e:
+            print(f"⚠️ Polling error: {e}")
+            print("🔄 Restarting in 5 seconds...")
+            import time
+            time.sleep(5)
