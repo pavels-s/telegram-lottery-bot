@@ -11,10 +11,29 @@
 import telebot
 import random
 import os
+from threading import Thread
+from flask import Flask
 
 # CONFIGURATION
 # Token is now taken from environment variable (secure!)
 API_TOKEN = os.environ.get('BOT_TOKEN', '')
+
+bot = telebot.TeleBot(API_TOKEN)
+
+# Flask web server for Render (keeps service alive)
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+@app.route('/health')
+def health():
+    return "OK"
+
+def run_flask():
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='0.0.0.0', port=port)
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -138,4 +157,11 @@ def handle_names(message):
 
 if __name__ == "__main__":
     print("🤖 Bot is running...")
+    
+    # Start Flask in a separate thread
+    flask_thread = Thread(target=run_flask)
+    flask_thread.daemon = True
+    flask_thread.start()
+    
+    # Start the bot
     bot.infinity_polling()
