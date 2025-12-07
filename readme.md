@@ -4,9 +4,12 @@
 **Hello!** This is my first telegram bot. I'm learning Python and wanted to create something practical that could be useful in real life. 
 This bot helps randomly select names from a list - perfect for giveaways or making fair decisions. So, it's always lottery :)
  
-This bot is hosted for free on https://www.render.com (dashboard: https://telegram-lottery-bot-kfwz.onrender.com/)
+[//]: # (This bot is hosted for free on https://www.render.com &#40;dashboard: https://telegram-lottery-bot-kfwz.onrender.com/&#41;)
 
-To keep this bot "alive" I am using UptimeRobot (dashboard: https://stats.uptimerobot.com/JPnnkOWUZi)
+[//]: # ()
+[//]: # (To keep this bot "alive" I am using UptimeRobot &#40;dashboard: https://stats.uptimerobot.com/JPnnkOWUZi&#41;)
+
+*To keep this Bot alive main idea was to make it free of charge, so I use https://www.pythonanywhere.com/ (which sometimes may switch to sleep mode du inactivity)
 
 # 🎰 Simple Lottery Telegram Bot
 
